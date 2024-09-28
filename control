@@ -1,0 +1,9 @@
+Package: com.archiverxp.sonia
+Name: Sonia
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome library of some sort!!
+Maintainer: Allison
+Author: Allison
+Section: System
+Tag: role::developer

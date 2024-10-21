@@ -10,11 +10,11 @@ unzip $1 Payload/
 
 #P.S: You are free to change the MininumOSVersion to whatever you'd like, only iOS 6 is supported though, so don't expect support.
 /usr/libexec/PlistBuddy -c "set :MinimumOSVersion 6.0" Payload/$2.app/Info.plist
-if cp .theos/obj/debug/Sonia.dylib .theos/obj/debug/GameController.dylib .theos/obj/debug/Foundation.dylib Payload/$2.app/Frameworks/; then
+if cp .theos/obj/debug/GameController.dylib Payload/$2.app/Frameworks/; then
     echo "Copying DYLIB to Frameworks folder."
 else
     mkdir Payload/$2.app/Frameworks/
-    cp .theos/obj/debug/Sonia.dylib .theos/obj/debug/GameController.dylib .theos/obj/debug/Foundation.dylib  Payload/$2.app/Frameworks/
+    cp .theos/obj/debug/GameController.dylib Payload/$2.app/Frameworks/
 fi
 
 install_name_tool \

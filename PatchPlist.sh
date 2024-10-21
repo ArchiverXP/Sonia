@@ -2,14 +2,11 @@
 set -e
 
 if [[ -z "$1" ]]; then
-  echo "Usage: $0 /path/to/decrypted.ipa appname"
+  echo "Usage: $0 appname"
   exit 1
 fi
 
-unzip $1 Payload/
-
-
-/usr/libexec/PlistBuddy -c "set :MinimumOSVersion 6.0" Payload/$2.app/Info.plist
+/usr/libexec/PlistBuddy -c "set :MinimumOSVersion 5.0" Payload/$1.app/Info.plist
 
 
 zip -r "$1" Payload

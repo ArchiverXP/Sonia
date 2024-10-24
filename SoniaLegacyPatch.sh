@@ -8,11 +8,11 @@ fi
 
 #P.S: You are free to change the MininumOSVersion to whatever you'd like, only iOS 6 is supported though, so don't expect support.
 /usr/libexec/PlistBuddy -c "set :MinimumOSVersion 6.0" Payload/$1.app/Info.plist
-if cp .theos/obj/debug/GameController.dylib  libsystem_m_mod.dylib Payload/$1.app/Frameworks/; then
+if cp .theos/obj/debug/GameController.dylib Payload/$1.app/Frameworks/; then
     echo "Copying DYLIB to Frameworks folder."
 else
     mkdir Payload/$1.app/Frameworks/
-    cp .theos/obj/debug/GameController.dylib libsystem_m_mod.dylib Payload/$1.app/Frameworks/
+    cp .theos/obj/debug/GameController.dylib Payload/$1.app/Frameworks/
 fi
 
 install_name_tool \

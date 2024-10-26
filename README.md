@@ -12,6 +12,8 @@ RedBall 4: Gets ingame and DOESN'T CRASH(‼️), still need to work on the Game
 
 Where's my Perry: Haven't tested it throughly yet, but as of the latest commit, gets ingame!
 
+PPAP: Gets in game, but once your bullet reaches the top, it crashes with KERN_INVALID_ADDRESS at 0x00000000.
+
 
 HOW TO USE:
 

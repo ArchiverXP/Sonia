@@ -15,6 +15,14 @@ else
     cp .theos/obj/debug/GameController.dylib Payload/$1.app/Frameworks/
 fi
 
+
+if cp ReSoniaDylib.dylib Payload/$1.app/Sonia/; then
+    echo "Copying DYLIB to Frameworks folder."
+else
+    mkdir Payload/$1.app/Sonia/
+    cp ReSoniaDylib.dylib Payload/$1.app/Sonia/
+fi
+
 install_name_tool \
     -change /System/Library/Frameworks/GameController.framework/GameController @executable_path/Frameworks/GameController.dylib Payload/$1.app/$1 \
     -change /usr/lib/libSystem.B.dylib @executable_path/Sonia/ReSoniaDylib.dylib \

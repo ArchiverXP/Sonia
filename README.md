@@ -31,4 +31,4 @@ Use Theos to compile.
 
 NOTE: THIS IS MAC ONLY!! This is because of install_name_tool.
 
-You can use a Hackintosh though, that's what I do.
+You can use a Hackintosh or a VM though, that's what I do.

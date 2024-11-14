@@ -29,6 +29,6 @@ Then, Patch your IPA with the SoniaLegacyPatch.sh file, supply both the extracte
 
 Use Theos to compile.
 
-NOTE: THIS IS MAC ONLY!! This is because of install_name_tool.
+<s>NOTE: THIS IS MAC ONLY!! This is because of install_name_tool.</s>
 
-You can use a Hackintosh or a VM though, that's what I do.
+NOT ANYMORE!!

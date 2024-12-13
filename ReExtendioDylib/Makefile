@@ -2,9 +2,9 @@ TARGET := iphone:clang:6.0
 
 include $(THEOS)/makefiles/common.mk
 
-LIBRARY_NAME = ReSoniaDylib empty
+LIBRARY_NAME = ReExtendioDylib empty
 
-ReSoniaDylib_FILES = ReSoniaDylib.c ReSoniaDylib.m
+ReSoniaDylib_FILES = ReExtendioDylib.c ReExtendioDylib.m
 
 ReSoniaDylib_LDFLAGS = -Xlinker -reexport_library empty.dylib -current_version 1.0.0 -compatibility_version 1.0.0
 

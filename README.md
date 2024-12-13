@@ -1,5 +1,5 @@
 # iExtendio
-An API extension for iOS 6! WIP.
+An API extension for Legacy iOS! WIP.
 
 
 WARNING: THIS IS MORE SO A POC, THIS API EXTENSION IS VERY UNSTABLE!!!!
@@ -21,14 +21,10 @@ First, either download the latest dylibs from Releases or compile them yourself.
 
 Then, you extract the ipa file in the same folder where the sh files are.
 
-Then, you put your downloaded/compiled dylibs in the root folder where Sonia resides.
+Then, you put your downloaded/compiled dylibs in the root folder where IExtendio resides.
 
-Now, you have to patch the ReSoniaDylib.dylib file to export from libSystem.B, this can be done with PatchDylib.sh.
+Now, you have to patch the iExtendioDylib.dylib file to export from libSystem.B, this can be done with PatchDylib.sh.
 
-Then, Patch your IPA with the SoniaLegacyPatch.sh file, supply both the extracted ipa file name.
+Then, Patch your IPA with the iExtendioLegacyPatch.sh file, supply both the extracted ipa file name.
 
 Use Theos to compile.
-
-<s>NOTE: THIS IS MAC ONLY!! This is because of install_name_tool.</s>
-
-NOT ANYMORE!!

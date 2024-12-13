@@ -16,26 +16,16 @@ else
 fi
 
 
-if cp ReSoniaDylib.dylib Payload/$1.app/Sonia/; then
+if cp ReExtendioDylib.dylib Payload/$1.app/iExtendio/; then
     echo "Copying DYLIB to Frameworks folder."
 else
-    mkdir Payload/$1.app/Sonia/
-    cp ReSoniaDylib.dylib Payload/$1.app/Sonia/
+    mkdir Payload/$1.app/iExtendio/
+    cp ReExtendioDylib.dylib Payload/$1.app/Extendio/
 fi
 
 install_name_tool \
     -change /System/Library/Frameworks/GameController.framework/GameController @executable_path/Frameworks/GameController.dylib Payload/$1.app/$1 \
-    -change /usr/lib/libSystem.B.dylib @executable_path/Sonia/ReSoniaDylib.dylib \
-
-#Is this needed?
-#./optool \
-#    install -c reexport -p @executable_path/Frameworks/libsystem_m_mod.dylib -t $1 -o Payload/$1/
-
+    -change /usr/lib/libSystem.B.dylib @executable_path/iExtendio/ReExtendioDylib.dylib \
+    
 zip -r "$1" Payload
 rm Payload/
-
-#LEFTOVER:
-#install_name_tool \
-#  -change /usr/lib/libSystem.B.dylib @executable_path/Frameworks/Sonia.dylib Payload/$1.app/$1 \
-#  -add_rpath /usr/lib/libSystem.B.dylib \
-

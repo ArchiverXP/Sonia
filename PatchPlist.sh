@@ -11,9 +11,3 @@ fi
 
 zip -r "$1" Payload
 rm Payload/
-
-#LEFTOVER:
-#install_name_tool \
-#  -change /usr/lib/libSystem.B.dylib @executable_path/Frameworks/Sonia.dylib Payload/$2.app/$2 \
-#  -add_rpath /usr/lib/libSystem.B.dylib \
-
